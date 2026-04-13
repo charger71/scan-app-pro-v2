@@ -1,0 +1,6 @@
+{
+"name":"Scan App Pro v2",
+"short_name":"ScanProV2",
+"start_url":".",
+"display":"standalone"
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scan App Pro v2</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<header>
+  <h2>Scan App Pro v2</h2>
+  <span id="status">🟢</span>
+</header>
+
+<div id="auth">
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="signIn()">Login</button>
+  <button onclick="signUp()">Sign Up</button>
+</div>
+
+<div id="app" hidden>
+
+  <div id="conflictBanner" class="hidden"></div>
+
+  <div class="input-card">
+    <input id="textInput" type="text" placeholder="Scan or type...">
+    <textarea id="notes" placeholder="Notes..."></textarea>
+
+    <div class="tag-row">
+      <button onclick="toggleTag('clean')">Clean</button>
+      <button onclick="toggleTag('dirty')">Dirty</button>
+      <button onclick="toggleTag('pm')">PM</button>
+      <button onclick="toggleTag('mr')">MR</button>
+      <button onclick="toggleTag('wi')">WI</button>
+      <button onclick="toggleTag('other')">Other</button>
+    </div>
+
+    <button onclick="saveRecord()">Save</button>
+  </div>
+
+  <ul id="list"></ul>
+
+  <button id="fab" onclick="saveRecord()">＋</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="supabase.js"></script>
+<script src="db.js"></script>
+<script src="sync.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
