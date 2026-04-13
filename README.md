@@ -23,3 +23,4 @@ tags jsonb
 updated_at bigint
 version int
 # scan-app-pro-v2
+# scan-app-pro-v2
